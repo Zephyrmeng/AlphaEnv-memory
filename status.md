@@ -11,7 +11,8 @@
 - **命名统一已收口**（ADR-006）：`ALPHAENV_*` 环境变量 · `data/alphaenv.db` · UI 品牌与 `<title>` 均改为 AlphaEnv；
   **容器目录名 `wuyu-web` 不改**。全档门禁 **10/10**、端点冒烟通过、前端 `dist` 已重建。
 - **T-001 异地备份已落地**：主仓 `github.com:Zephyrmeng/AlphaEnv.git` · 记忆册 `…/AlphaEnv-memory.git`，
-  两仓均已 `push -u origin main`，远端 HEAD 与本机一致（`76a755e` / `5935369`）。状态 **`待核销`**，等你确认。
+  两仓均已 `push -u origin main`，并已从 GitHub 全新 clone 复核（74 / 12 文件，`MEMORY.md` sha 一致）。
+  状态 **`待核销`**，等你确认。
 
 ## 现场实测（2026-11-09 20:45 复测，项目根 `/Users/zephyr/Desktop/wuyu-web/AlphaEnv/`）
 
