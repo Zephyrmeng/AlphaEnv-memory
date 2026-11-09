@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "note": "日志处理台账：状态机 pending → distilled → verified → archived（单向，由 tools/_log_ledger.py 维护，勿手改）",
+  "entries": {}
+}
