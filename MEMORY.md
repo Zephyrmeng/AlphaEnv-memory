@@ -16,7 +16,8 @@
 - 项目根 `/Users/zephyr/Desktop/wuyu-web/AlphaEnv/`；定位：**面向 C 端的多指标 / 数据 / 日报看盘站**，后续同步微信小程序与手机端网页
 - 栈：Python 3.12 + FastAPI + SQLite(WAL) + React 18 + TypeScript + Vite
 - 端口：后端 **8021**（绑 `0.0.0.0`）· 前端 **5273**（Vite，反代 `/api`）· preview **4273**；**8001/5173 属另一个项目 QuantX，别再改回去** —— 改端口要四处同改（`README.md` / `MANAGEMENT.md` / `AGENTS.md` / `frontend/vite.config.ts`）
-- 数据源：**先复用 QuantX、后独立**（ADR-002）—— 复用期**只读**，禁止反向写 QuantX 库；开关 `WUYU_DATA_SOURCE=quantx|local`，quantx 走 `quantx_ro.py`（`mode=ro` + `query_only=1`）
+- 数据源：**先复用 QuantX、后独立**（ADR-002）—— 复用期**只读**，禁止反向写 QuantX 库；开关 `ALPHAENV_DATA_SOURCE=quantx|local`，quantx 走 `quantx_ro.py`（`mode=ro` + `query_only=1`）
+- 命名：项目名与全部标识符统一 **AlphaEnv**（环境变量 `ALPHAENV_*` · 自有库 `data/alphaenv.db` · UI 品牌与 `<title>`）；**`wuyu-web` 只是容器目录名，不改**（ADR-006）
 - 数据库：**SQLite + WAL**（ADR-005）· 免登录，但 `users` 表与 `user_id` 外键位置**已预留**（ADR-004）
 - 节奏：**Web 优先、小程序后补**（ADR-003）—— 纯逻辑抽共享层，**不为小程序引入跨端框架**
 - 架构与管理经验参考：`docs/plans/` 下的迁移清单 —— 那份是**参照**，本项目自己的权威仍在根目录文档
