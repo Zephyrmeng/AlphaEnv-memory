@@ -1,4 +1,4 @@
-# wuyu-web · 长期记忆（L1 注入层）
+# AlphaEnv · 长期记忆（L1 注入层）
 
 > 本册＝`/Users/zephyr/Desktop/wuyu-web/AlphaEnv/.workbuddy/memory/`（**独立 git 仓**，与主仓分开提交）
 > **L1 维护方式**：**手维护**（不走生成器）⇒ 改前跑 `tools/_l1_token_guard.py snapshot`，改完 `check` 必须报「**丢失 0**」
