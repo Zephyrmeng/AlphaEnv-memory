@@ -1,6 +1,6 @@
 # wuyu-web · 长期记忆（L1 注入层）
 
-> 本册＝`/Users/zephyr/Desktop/wuyu-web/.workbuddy/memory/`（**独立 git 仓**，与主仓分开提交）
+> 本册＝`/Users/zephyr/Desktop/wuyu-web/AlphaEnv/.workbuddy/memory/`（**独立 git 仓**，与主仓分开提交）
 > **L1 维护方式**：**手维护**（不走生成器）⇒ 改前跑 `tools/_l1_token_guard.py snapshot`，改完 `check` 必须报「**丢失 0**」
 > 建册 **2026-11-09** · 当前为**首版骨架**，尚无实战蒸馏 ⇒ 本册只写已定事实，**不预填**猜测
 
@@ -12,7 +12,7 @@
 
 ## 项目核心事实
 
-- 项目根 `/Users/zephyr/Desktop/wuyu-web/`；定位：**面向 C 端的多指标 / 数据 / 日报看盘站**，后续同步微信小程序与手机端网页
+- 项目根 `/Users/zephyr/Desktop/wuyu-web/AlphaEnv/`；定位：**面向 C 端的多指标 / 数据 / 日报看盘站**，后续同步微信小程序与手机端网页
 - 栈：Python 3.12 + FastAPI + SQLite(WAL) + React 18 + TypeScript + Vite
 - 端口：**未定**（基线取自 QuantX：后端 8001 绑 `0.0.0.0`、前端 5173 Vite 反代 `/api`）⇒ 定了就写死在这里
 - 数据源：**先复用 QuantX、后独立**（ADR-002）—— 复用期**只读**，禁止反向写 QuantX 库；切换开关**尚未落地**
