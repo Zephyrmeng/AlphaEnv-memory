@@ -7,10 +7,11 @@
 
 ## 正在做
 
-- **P2a 入库已落地（T-006 待核销）**：`scripts/sync_from_quantx.py` 把 `stock_daily`（1192 万行）与
-  `index_member`（46 万行）同步进 `data/alphaenv.db`（698 MB，8.7 秒），并生成 `data/cache/_cache_stock_ret.pkl`（64 MB）。
-- **2c 的唯一缺口是 CNE5/CNE6（T-008，阻塞方=你）**：你去找回原始文件；子任务研究结论=代码只消费 CNE5，
-  自建最多覆盖 6/13 个因子且与 CNE5 不可比（详见数据清单 §七）。
+- **P2a 入库已落地**（T-006 已核销）：同步脚本把 `stock_daily`（1192 万行）与 `index_member`（46 万行）
+  同步进 `data/alphaenv.db`（698 MB，8.7 秒），并生成 `data/cache/_cache_stock_ret.pkl`（64 MB）；成分股已区间化（11,532 行）。
+- **CNE5/CNE6 因子研究已出报告**：`docs/research/无鱼V3模型/_因子可复现性_20261110.md` ——
+  代码只消费 CNE5 的 10 个因子（CNE6 一个没用）；本机可造 6 个、缺 4 个（正好是基本面簇全部）。
+- **2c 的缺口是 CNE5 文件（T-008，阻塞方=你）**：你找回 `Barra风格因子累计收益2015/` 即可收口。
 - **重构总规划已定**：`docs/plans/_重构总规划_20261110.md`，七阶段 P0–P6；当前在 P2a。
 
 ## 已完成（历史，不再展开）
